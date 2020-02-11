@@ -2,7 +2,12 @@
 
 This is a rainmeter skin for monitoring AQI level in Thailand. If you don't have rainmeter installed, you can download rainmeter [here](https://www.rainmeter.net/). The data showing in the skin comes from [Thailand Pollution Control Department](http://air4thai.pcd.go.th/webV2/#).
 
+## Download Rainmeter Skin Installer
+
+Download [here](https://github.com/komson-lim/rainmeter-thailandaqi/blob/master/Thailand%20AQI%20Monitor_.rmskin?raw=true).
+
 ## Configure
+
 Copy ID number that will be displayed on the skin and paste it in Variables.inc in the @Resources folder. Be aware that some stations do not report all the values. You can check the raw data at [PCD Website](http://air4thai.pcd.go.th/webV2/#) first.
 ```
 [ID]    [AreaName]
