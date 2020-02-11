@@ -7,7 +7,7 @@ green = "124,240,89,255"
 yellow = "255,255,0,255"
 qualityText = Loading . . .
 ; Enter your ID below here
-ID = bkp85t
+ID = 02t
 [GetJSON]
 Measure = WebParser
 URL = http://air4thai.pcd.go.th/services/getNewAQI_JSON.php?stationID=#ID#
