@@ -4,11 +4,12 @@ This is a rainmeter skin for monitoring AQI level in Thailand. If you don't have
 
 ## Download Rainmeter Skin Installer
 
-Download [here](https://github.com/komson-lim/rainmeter-thailandaqi/blob/master/Thailand%20AQI%20Monitor_.rmskin?raw=true).
+Download [here](https://github.com/komson-lim/rainmeter-thailandaqi/raw/master/Thailand%20AQI%20Monitor_1.1.rmskin).
 
 ## Configure
 
 Copy ID number that will be displayed on the skin and paste it in Variables.inc in the @Resources folder. Be aware that some stations do not report all the values. You can check the raw data at [PCD Website](http://air4thai.pcd.go.th/webV2/#) first.
+
 ```
 [ID]    [AreaName]
 02t     Bansomdejchaopraya Rajabhat University
@@ -105,7 +106,7 @@ m8      Khai Surasinghanat
 26t     Environmental Office 8 ratchaburi
 37t     Meteorological stations, Lampang
 38t     Health Promotion Hospital Sob Pad, Lampang
-39t     Health Promotion Hospital 
+39t     Health Promotion Hospital
 40t     Provincial Waterworks Authority Mae Moh
 68t     Meteorological Staions, Lamphun
 44t     Hat Yai Municipality
@@ -131,4 +132,3 @@ o10     Mobile Air Quality Monitoring unit No.04
 69t     Meteorology Center, Phrae
 58t     Natural Resources and Environment Office, Mae Hongson
 ```
-
