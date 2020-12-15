@@ -28,10 +28,12 @@ DynamicVariables = 1
 Disabled = 1
 [GetJSON]
 Measure = WebParser
-URL = http://air4thai.pcd.go.th/services/getNewAQI_JSON.php?stationID=#ID#
+URL = #urlString#
 RegExp=(?siU)"stationID":"(.*)".*"nameEN":"(.*)".*"areaEN":"(.*)".*"date":"(.*)".*"time":"(.*)".*"PM25":.*"value":"(.*)".*"unit":"(.*)".*"PM10":.*"value":"(.*)".*"unit":"(.*)".*"O3":.*"value":"(.*)".*"unit":"(.*)".*"CO":.*"value":"(.*)".*"unit":"(.*)".*"NO2":.*"value":"(.*)".*"unit":"(.*)".*"SO2":.*"value":"(.*)".*"unit":"(.*)".*"AQI":.*"level":"(.*)".*"aqi":"(.*)"
-UpdateRate = 600
-FinishAction = [!Log "Retrieved AQI" "Notice"]
+UpdateRate = 601
+FinishAction = [!Log "Retrieved data from #urlString#" "Notice"]
+DynamicVariables = 1
+Disabled = 1
 [MeasureID]
 Measure = WebParser
 URL = [GetJSON]
