@@ -6,8 +6,26 @@ blue = "92,203,250,255"
 green = "124,240,89,255"
 yellow = "255,255,0,255"
 qualityText = Loading . . .
+urlString = "http://air4thai.pcd.go.th/services/getNewAQI_JSON.php?stationID=[#ID]"
 ; Enter your ID below here
 ID = 02t
+backupID = bkp84t
+[GetAQI]
+Measure = WebParser
+URL = "http://air4thai.pcd.go.th/services/getNewAQI_JSON.php?stationID=[#ID]"
+RegExp=(?siU)"AQI":"(.*)"
+StringIndex = 1
+UpdateRate = 600
+FinishAction = [!Log "Retrieved AQI" "Notice"] [!EnableMeasure CheckBackup]
+DynamicVariables = 1
+[CheckBackup]
+Measure = Calc
+Formula = GetAQI
+IfCondition = (CheckBackup = -1)
+IfTrueAction = [!SetVariable "urlString" "http://air4thai.pcd.go.th/services/getNewAQI_JSON.php?stationID=[#backupID]"] [!EnableMeasure GetJSON] [!CommandMeasure GetJSON "Update"] [!Log "1" "Debug"] [!DisableMeasure CheckBackup]
+IfFalseAction = [!SetVariable "urlString" "http://air4thai.pcd.go.th/services/getNewAQI_JSON.php?stationID=[#ID]"] [!EnableMeasure GetJSON] [!CommandMeasure GetJSON "Update"] [!Log "0" "Debug"] [!DisableMeasure CheckBackup]
+DynamicVariables = 1
+Disabled = 1
 [GetJSON]
 Measure = WebParser
 URL = http://air4thai.pcd.go.th/services/getNewAQI_JSON.php?stationID=#ID#
